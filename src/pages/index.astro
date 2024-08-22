@@ -14,24 +14,28 @@ const job = "Fullstack Developer"
 
 <Layout title="Hugo Gallois">
 	<main class="flex flex-col justify-center items-center">
-
 	    <Image
-        class="border-[#F5FFFA] border-2 rounded-full mx-auto mb-6"
-	      src={prof3}
-		    alt="Profile picture"
-		    width="136" height="136" 
+			class="border-[#F5FFFA] border-2 rounded-full mx-auto mb-6 transition-opacity ease-in duration-500 opacity-0"
+			src={prof3}
+			alt="Profile picture"
+		    width="136" height="136"
+			observe-me
 		  />
-		<h1 class="text-5xl text-center mb-4">
+		<h1 class="text-5xl text-center mb-4 transition-opacity ease-in duration-500 opacity-0 before:content-[''] before:inline-block" observe-me>
 			{name}
 		</h1>
-        <p class="text-xl font-light text-center mb-6">
+        <p class="text-xl font-light text-center mb-6 transition-opacity ease-in duration-500 opacity-0" observe-me>
 			{job}
 		</p>
 
-		<section class="flex flex-row">
+		<section class="flex flex-row transition-opacity ease-in duration-500 opacity-0" observe-me>
 			<img src={github.src} alt="Github icon" width="40" height="40" />
 			<img src={x.src} alt="X icon" width="40" height="40" class="mx-4"/>
 			<img src={envelope.src} alt="Envelope icon" width="40" height="40" />
 		</section>
+
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</main>
 </Layout>
