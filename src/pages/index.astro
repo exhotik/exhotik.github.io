@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+import prof3 from '../images/prof3.jpg';
+import github from '../images/github.svg';
+import x from '../images/x.svg';
+import envelope from '../images/envelope.svg';
+
+const name = "Hugo Gallois"
+const job = "Fullstack Developer"
+---
+
+
+<Layout title="Hugo Gallois">
+	<main class="flex flex-col justify-center items-center">
+
+	    <Image
+        class="border-[#F5FFFA] border-2 rounded-full mx-auto mb-6"
+	      src={prof3}
+		    alt="Profile picture"
+		    width="136" height="136" 
+		  />
+		<h1 class="text-5xl text-center mb-4">
+			{name}
+		</h1>
+        <p class="text-xl font-light text-center mb-6">
+			{job}
+		</p>
+
+		<section class="flex flex-row">
+			<img src={github.src} alt="Github icon" width="40" height="40" />
+			<img src={x.src} alt="X icon" width="40" height="40" class="mx-4"/>
+			<img src={envelope.src} alt="Envelope icon" width="40" height="40" />
+		</section>
+	</main>
+</Layout>
